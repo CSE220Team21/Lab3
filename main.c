@@ -1,5 +1,6 @@
 //
-//	Team 21 (https://github.com/CSE220Team21/Lab3) //	Mike Mayr (MMayr15), Charlie Crow (LevenBravo)
+//	Team 21 (https://github.com/CSE220Team21/Lab3) 
+//	Mike Mayr (MMayr15), Charlie Crow (LevenBravo)
 //	3/19/14
 //	CSE 220: T/Th 10:30am
 //
