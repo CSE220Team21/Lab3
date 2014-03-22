@@ -30,19 +30,65 @@ int main(int argc, const char * argv[])
         add_token_to_list(token_list, token);
         print_token(token);
     }
-    while (???);//What is the sentinal value that ends this loop?
+    while (???);
+    
+     //What is the sentinal value that ends this loop?
+     //value whose presence guarantees termination of a loop that processes structured (especially sequential) data.
+     // should just able to look for NULL - if NULL then end
+     // token != NULL
+     //http://www.learn-c.org/en/Linked_lists
     
     quit_scanner(source_file, token_list);
     return 0;
 }
 void add_token_to_list(Token *list, Token *new_token)
 {
+    
+    /* EXAMPLE ADD END OF LIST
+    
+    void push(node_t * head, int val) {
+    node_t * current = head;
+    while (current->next != NULL) {
+        current = current->next;
+    }
+
+    // now we can add a new variable
+    current->next = malloc(sizeof(node_t));
+    current->next->val = val;
+    current->next->next = NULL;
+    } 
+    
+    // EXAMPLE ADD BEGINING OF LIST
+    
+    void push(node_t ** head, int val) {
+    node_t * new_node;
+    new_node = malloc(sizeof(node_t));
+
+    new_node->val = val;
+    new_node->head = *head;
+    *head = new_node;
+    }
+    
+    */
+    
+    
     // Add new_token to the list knowing that list is a linked list.
+    
 }
 void quit_scanner(FILE *src_file, Token *list)
 {
     //write code to free all of the memory for the token list
-
+    //free(*list)
+    //free(list)
+    //free the pointer then free the actual
+    //may need to loop through if list is a list of pointers // don't mem leak
+    // while( NULL != it ) {
+    // node * tmp = it;
+    // it = it->next;
+    // free(tmp);
+    //  }  
+    
+    
     fclose(src_file);
 }
 FILE *init_lister(const char *name, char source_file_name[], char dte[])
