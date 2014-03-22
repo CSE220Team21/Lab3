@@ -45,11 +45,13 @@ int main(int argc, const char * argv[])
 void add_token_to_list(Token *list, Token *new_token)
 {
     
-    /* EXAMPLE ADD END OF LIST
+    //ADD END OF LIST
     
-    void push(node_t * head, int val) {
+    void push(node_t * head, int val) 
+    {
     node_t * current = head;
-    while (current->next != NULL) {
+    while (current->next != NULL) 
+    {
         current = current->next;
     }
 
