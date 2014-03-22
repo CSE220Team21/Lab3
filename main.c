@@ -1,4 +1,8 @@
 //
+//	Team 21 (https://github.com/CSE220Team21/Lab3) //	Mike Mayr (MMayr15), Charlie Crow (LevenBravo)
+//	3/19/14
+//	CSE 220: T/Th 10:30am
+//
 //  main.c
 //  Lab3
 //
@@ -30,13 +34,9 @@ int main(int argc, const char * argv[])
         add_token_to_list(token_list, token);
         print_token(token);
     }
-    while (???);
+    while (token != null);  //checks token if == to null exits
     
-     //What is the sentinal value that ends this loop?
-     //value whose presence guarantees termination of a loop that processes structured (especially sequential) data.
-     // should just able to look for NULL - if NULL then end
-     // token != NULL
-     //http://www.learn-c.org/en/Linked_lists
+
     
     quit_scanner(source_file, token_list);
     return 0;
