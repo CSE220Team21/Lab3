@@ -39,7 +39,7 @@ int main(int argc, const char * argv[])
     
 
     
-    quit_scanner(source_file, token_list);
+    quit_scanner(source_file, token_list); //exits wile loop
     return 0;
 }
 void add_token_to_list(Token *list, Token *new_token)
@@ -70,15 +70,16 @@ void add_token_to_list(Token *list, Token *new_token)
 void quit_scanner(FILE *src_file, Token *list)
 {
     //write code to free all of the memory for the token list
-    //free(*list)
-    //free(list)
+    free(*list)
+    free(list)
     //free the pointer then free the actual
     //may need to loop through if list is a list of pointers // don't mem leak
-    // while( NULL != it ) {
-    // node * tmp = it;
-    // it = it->next;
-    // free(tmp);
-    //  }  
+     while( NULL != it ) 
+     {
+        node * tmp = it;
+        it = it->next;
+        free(tmp);
+      }  
     
     
     fclose(src_file);
