@@ -35,8 +35,8 @@ int main(int argc, const char * argv[])
         add_token_to_list(token_list, token);
         print_token(token);
     }
-    while (token != null);  //checks token if == to null exits
-    
+    while (token != NULL);  //checks token if == to null exits
+    // use NULL when reffering to NULL
 
     
     quit_scanner(source_file, token_list); //exits wile loop
@@ -46,7 +46,7 @@ void add_token_to_list(Token *list, Token *new_token)
 {
     
     //ADD END OF LIST
-    
+    /*
     void push(node_t * head, int val) 
     {
     node_t * current = head;
@@ -61,6 +61,10 @@ void add_token_to_list(Token *list, Token *new_token)
     current->next->next = NULL;
     } 
     
+    recode this to match your inputs
+    *list and *new_token
+    */
+    
     
     
     
@@ -74,13 +78,14 @@ void quit_scanner(FILE *src_file, Token *list)
     free(list)
     //free the pointer then free the actual
     //may need to loop through if list is a list of pointers // don't mem leak
-     while( NULL != it ) 
+     /*while( NULL != it ) 
      {
         node * tmp = it;
         it = it->next;
         free(tmp);
-      }  
-    
+      }
+      recode this to match the incoming inputs .... turd
+    */
     
     fclose(src_file);
 }
