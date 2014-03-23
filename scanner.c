@@ -376,15 +376,15 @@ static char* get_special(char* token_ptr, Token* token)
             token->c1 = AND;
             token->t1 = REAL_LIT;
             break;
-        case '|': //runs when vertical line is encountered
+        case '|': //runs when vertical line | is encountered
             token->c1 = OR;
             token->t1 = REAL_LIT;
             break;
-        case '%': //runs when percent sign is encountered
+        case '%': //runs when percent sign % is encountered
             token->c1 = MOD;
             token->t1 = REAL_LIT;
             break;
-        case '\0': //runs when null operator is encountered
+        case '\0': //runs when null  operator is encountered
             token->c1 = NO_TOKEN;
             token->t1 = REAL_LIT;
             break;
