@@ -34,9 +34,9 @@ void print_line(char line[], char source_name_to_print[], char date_to_print[])
         print_page_header(source_name_to_print, date_to_print);
         line_count = 1;
     }
-	if (strlen(line) > MAX_PRINT_LINE_LENGTH) 
+	if (strlen(line) > MAX_PRINT_LINE_LENGTH) //compares line with max length
 	{
-        save_chp = &line[MAX_PRINT_LINE_LENGTH];
+        save_chp = &line[MAX_PRINT_LINE_LENGTH]; //prints line
     }
     if (save_chp)
 	{
@@ -54,7 +54,7 @@ static void print_page_header(char source_name[], char date[])
 {
     static int page_number = 0;
         putchar(FORM_FEED_CHAR);
-    printf("Page    %d  %s  %s\n\n", ++page_number, source_name, date);
+    printf("Page    %d  %s  %s\n\n", ++page_number, source_name, date);//prints page number source name and date
 }
 
 
