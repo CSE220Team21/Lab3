@@ -61,18 +61,7 @@ void add_token_to_list(Token *list, Token *new_token)
     current->next->next = NULL;
     } 
     
-    // EXAMPLE ADD BEGINING OF LIST
     
-    void push(node_t ** head, int val) {
-    node_t * new_node;
-    new_node = malloc(sizeof(node_t));
-
-    new_node->val = val;
-    new_node->head = *head;
-    *head = new_node;
-    }
-    
-    */
     
     
     // Add new_token to the list knowing that list is a linked list.
