@@ -74,18 +74,22 @@ void add_token_to_list(Token *list, Token *new_token)
 void quit_scanner(FILE *src_file, Token *list)
 {
     //write code to free all of the memory for the token list
-    free(*list)
-    free(list)
-    //free the pointer then free the actual
-    //may need to loop through if list is a list of pointers // don't mem leak
-     /*while( NULL != it ) 
-     {
-        node * tmp = it;
-        it = it->next;
-        free(tmp);
-      }
-      recode this to match the incoming inputs .... turd
-    */
+   // free(*list)
+   // free(list)
+    
+    //may need to loop through if list is a list of pointers
+    //deallocate each pointer in the linked list then deallocate the linked list
+    // don't mem leak
+    
+    while(list != NULL)
+    {
+        Token * tempptr = list;
+        list = list->next;
+        free(tempptr);
+    }
+    
+    free(*list);
+    free(list);
     
     fclose(src_file);
 }
